@@ -1,0 +1,37 @@
+지난 주 로또 번호 </br>
+
+<% @lotto2.each do |x| %>
+   
+    <img src="/lotto/<%= x %>.png"/>
+ <% end %>
+</br>
+
+랜덤 로또 번호 </br>
+
+<% @lotto.each do |l| %>
+
+<img src ="/lotto/<%= l%>.png"/>
+<% end %>
+
+</br>
+겹치는 로또 번호 </br>
+<% @lotto3.each do |a|%>
+
+<img src ="/lotto/<%= a%>.png"/>    
+<% end %>
+
+<%= @lotto3.length %>개 당첨
+
+<% if @lotto3.length == 6 %>
+    1등!!
+   <% elsif @lotto3.length == 5 %>
+      2등!
+    <% elsif @lotto3.length == 4 %>   
+      3등
+    <% elsif @lotto3.length == 3 %>
+    4등          
+    <% else %>
+    5등
+    
+    <% end %>
+                   
